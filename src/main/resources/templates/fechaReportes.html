@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device'width,initial-scale=1">
+	<meta http-equiv="x-ua-compatible" <link
+		href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+
+
+
+<body style="background-color: rgb(191, 255, 255)">
+
+	<h1 style=" text-align:center"> BUSQUEDA DE REPORTES</h1><br />
+	<div>
+		<form action="#" th:action="@{/sistemas/reservas/lista}" th:method="get">
+			<label> SELECCIONE LA PRIMERA FECHA: </label>
+			<td>
+				<input type="datetime-local" id="fechaInicio" name="fechaInicio">
+			</td> <br />
+			<br />
+			<br />
+			<label> SELECCIONE LA SEGUNDA FECHA (DEBE SER MAYOR A LA PRIMERA FECHA): </label>
+			<td>
+				<input type="datetime-local" id="fechoFin" name="fechaFin">
+
+			</td><br />
+
+			<input type="submit" value="Buscar"
+				style="border-color: rgb(64, 0, 64); color: rgb(64, 0, 64); background-color: lightcyan;"><br />
+
+
+		</form>
+	</div>
+	<hr style="color: rgb(64, 0, 64);">
+	<div style="text-align: center;">
+		<h3> REGRESE AL MENU</h3><br />
+		<form action="#" th:action="@{/sistemas/menu/reportes}" th:method="get">
+			<input type="submit" value="ATRAS "
+				style="border-color: rgb(64, 0, 64); color: rgb(64, 0, 64); background-color: lightcyan;">
+		</form>
+	</div>
+</body>
+
+
+
+</html>
